@@ -1,0 +1,30 @@
+{
+	"schemaVersion": 1,
+	"id": "tpsz",
+	"version": "${version}",
+	"name": "Totem Pop Size",
+	"description": "changes the size of the totem that flies up on your screen when you pop. keeps big pack totems small. menu in mod menu, needs Wysss Library.",
+	"authors": ["realwysss"],
+	"license": "All-Rights-Reserved",
+	"icon": "assets/tpsz/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"client": ["dev.tpsz.Tpsz"],
+		"modmenu": ["dev.tpsz.ModmenuIntgr"]
+	},
+	"mixins": [
+		{
+			"config": "tpsz.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"suggests": {
+		"modmenu": "*"
+	},
+	"depends": {
+		"wysslib": ">=1.1.0",
+		"fabricloader": ">=0.16.0",
+		"minecraft": ">=1.21 <1.22",
+		"java": ">=21"
+	}
+}
